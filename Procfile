@@ -1,0 +1,1 @@
+web: ./env/bin/Python app.py
