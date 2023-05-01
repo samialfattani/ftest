@@ -8,11 +8,12 @@ def hello():
     return "Hello, World!"
 
 # if __name__ == "__main__":
-#     app.run()
 
 if __name__ == '__main__':
-    from waitress import serve
     p = os.environ.get('PORT')
     p = p if p else '5051'
-    print('ok')
-    serve(app, host='0.0.0.0', port=p)
+    print(f"https://localhost:{p}")
+    print(f"https://127.0.0.1:{p}")
+    # from waitress import serve
+    # serve(app, host='0.0.0.0', port=p) # Waitress
+    app.run() # default
